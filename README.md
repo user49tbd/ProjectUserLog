@@ -12,10 +12,7 @@ sql
 
 INSERT INTO role_entity VALUES ('admin');
 ## Tecnologias Utilizadas
-Frontend: Angular
-Backend: Spring Boot
-Segurança: Spring Security
-Banco de Dados: SQL (MySQL ou PostgreSQL)
+![Angular Logo](https://angular.io/assets/images/logos/angular/angular.svg) ![Spring Boot Logo](https://spring.io/images/spring-boot.svg) ![SQL Logo](https://upload.wikimedia.org/wikipedia/commons/2/29/SQL.svg)
 
 
 
