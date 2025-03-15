@@ -16,3 +16,9 @@ Frontend: Angular
 Backend: Spring Boot
 Segurança: Spring Security
 Banco de Dados: SQL (MySQL ou PostgreSQL)
+
+
+
+https://github.com/user-attachments/assets/df4a7575-659c-417e-9d58-4549fa35581e
+
+
