@@ -4,8 +4,8 @@ Este projeto é uma aplicação que demonstra a integração entre Angular e Spr
 ## Funcionalidades
 Autenticação de Usuário: Os usuários podem se registrar e fazer login na aplicação.
 Gerenciamento de Papéis: O sistema suporta dois papéis:
-User: Acesso básico à aplicação.
-Admin: Acesso avançado, permitindo listar usuários e modificar seus privilégios.
+- **User**: Acesso básico à aplicação.
+- **Admin**: Acesso avançado, permitindo listar usuários e modificar seus privilégios.
 Persistência em Banco de Dados: Os dados dos usuários e papéis são armazenados em um banco de dados SQL. Para criar o papel de admin, você pode executar o seguinte comando SQL:
 sql
 
