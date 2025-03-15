@@ -1,0 +1,11 @@
+<div class="Item">
+    <div [ngClass]="fieldException"  class="data">
+        <label [attr.for]="fieldID">{{fieldName}}</label>
+        <input [type]="fieldType" placeholder=" " [id]="fieldID" [name]="fieldID" 
+        (input)="onChange(result)"
+        (blur)="onTouched()" [(ngModel)]="result">
+    </div>
+    <div *ngIf="fieldException?.invalidCK==true" class="errMsg">
+        <p>{{fieldValid?.errors?.['error']}}</p>
+    </div>
+</div>

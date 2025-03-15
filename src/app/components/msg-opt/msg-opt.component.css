@@ -1,0 +1,86 @@
+.Container {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    width: 100%;
+    height: 30%;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 10;
+    overflow: hidden;
+}
+.mainC{
+    height: 70%;
+    width: 70%;
+    position: relative;
+    font-size: medium;
+    color: white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+}
+.btnLst{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70%;
+    gap: 15px;
+}
+.btnLst > button{
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 25%;
+    height: 50%;
+    font-size: 35px;
+    border-radius: 5px;
+    z-index: 2;
+    transition: 0.5s;
+}
+.btnLst > button:hover{
+    background: black;
+    color: white;
+}
+@property --q{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.mainC::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    padding: 5px;
+    border-radius: 15px;
+    background-image: conic-gradient(from var(--q),black,yellow,black);
+    animation-name: anim1;
+    animation-delay: 0s;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.mainC::after{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes anim1 {
+    from{
+        --q:0deg;
+    }
+    to{
+        --q:360deg
+    }
+}

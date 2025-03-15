@@ -1,0 +1,20 @@
+<div class="CTag">
+    <div class="ListUsrs">
+        <div class="mainContent" *ngIf="listUsrs; else els" >
+            <table class="tabData">
+                <thead>
+                    <tr><th>Name</th><th>Password</th><th>Role</th></tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of listUsrs;let i = index">
+                        <td>{{item.name}}</td><td>{{item.password}}</td><td>
+                            <img [src]="item.roles[0].role | iconP" (click)="changeP(item)"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <ng-template #els>
+            <p>no content</p>
+        </ng-template>
+    </div>
+</div>

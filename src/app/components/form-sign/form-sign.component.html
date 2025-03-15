@@ -1,0 +1,31 @@
+<div class="formC">
+    <form [formGroup]="form01">
+        <div class="logo">
+            <app-logo-gen [bkImg]="'/assets/imgs/program.jpg'" 
+            [maskImg]="'/assets/icon/configuration.png'"></app-logo-gen>
+        </div>
+        <div class="box">
+            <div class="ckList">
+                <app-step-lst [qtd]="2" [errPos]="getErr()"></app-step-lst>
+            </div>
+            <div class="fields">
+                <app-field [fieldName]="'Name'" [fieldID]="'nameS'" 
+                [fieldType]="'text'" [fieldValid]="form01.get('name')" 
+                [fieldException]="getClas('name')" 
+                formControlName="name"></app-field>
+                <app-field [fieldName]="'Password'" [fieldID]="'passwordS'" 
+                [fieldType]="'password'" [fieldValid]="form01.get('password')" 
+                [fieldException]="getClas('password')" 
+                formControlName="password"></app-field>
+            </div>
+        </div>
+        <div class="BtnLst">
+            <app-btn-c (click)="reset()" name="Reset" [ck]="'validCK'"></app-btn-c>
+            <app-btn-c (click)="subs()" name="Send" [ck]="form01.invalid ? 'invalidCK' :'validCK'"></app-btn-c>
+        </div>
+        <span class="fieldsErr" *ngIf="form01.errors">
+            <p>{{form01.errors['error']}}</p>
+        </span>
+    </form>
+</div>
+

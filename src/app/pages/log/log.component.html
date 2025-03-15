@@ -1,0 +1,52 @@
+<!--div class="Container">
+    <app-form1></app-form1>
+</div--><div class="Container">
+    <div class="Content">
+        <div class="Intro">
+            <div class="txt">
+                <h3>Info</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad possimus, 
+                    eius ut explicabo optio, laudantium eveniet sed nam cum praesentium 
+                    suscipit. Expedita aut perspiciatis non, dolore maxime ipsum id repudiandae!
+                </p>
+            </div>
+        </div>
+        <div class="Data">
+            <div class="LeftC">
+                <app-form-sign></app-form-sign>
+            </div>
+            <div class="RightC">
+                <app-form1></app-form1>
+            </div>
+            <div class="Slider">
+                <div class="BtnIntro" (click)="introChange()">
+                    <p>intro</p>
+                    <button>&DownArrow;</button>
+                </div>
+                <div class="SlideOptC">
+                    <div class="formName">
+                        <p>form</p>
+                    </div>
+                    <div class="RC">
+                        <div class="items">
+                            <div class="log"><span>
+                                <img class="select" src="assets/icon/user_17740838.png">
+                                <p class="txtOpt select">login</p></span></div>
+                            <div class="sign"><span>
+                                <img src="assets/icon/configuration.png">
+                                <p class="txtOpt">Sign up</p></span></div>
+                            <div class="SelectorFrame">
+                                <div class="SelectorC">
+                                    <div class="Icon" (click)="changeSides()">&rarr;</div>
+                                    <div class="tEffect"></div>
+                                    <div class="bEffect"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

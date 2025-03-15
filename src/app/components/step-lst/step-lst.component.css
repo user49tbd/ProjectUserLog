@@ -1,0 +1,57 @@
+.ContainerLst,.Item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+.Item{
+    position: relative;
+}
+.Item > div{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    height: calc( 100% / 2);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    z-index: 1;
+    position: relative;
+    transition: 0.5s;
+}
+.Item > div:not(.bkcol),.Item>div:not(.bkcolR){
+    transition-delay: calc(0.25s * (var(--max) - var(--pos)));
+}
+.ContainerLst > .Item:not(:nth-child(1))::before{
+    content:'';
+    position: absolute;
+    height: 0%;
+    width: 2px;
+    background-color: gray;
+    top: -50%;
+    z-index: -1;
+    transition: 0.5s;
+    transition-delay: calc(0.25s * var(--max));
+    transition-delay: calc(0.25s * (var(--max) - var(--pos)));
+}
+.ContainerLst > .Item:not(:nth-child(1)):has(.bkcol)::before{
+    transition-delay: calc(0.25s * var(--pos)) !important;
+    background-color: green !important;
+    height: 100%;
+}
+.ContainerLst > .Item:not(:nth-child(1)):has(.bkcolR)::before{
+    transition-delay: calc(0.25s * var(--pos)) !important;
+    background-color: red !important;
+    height: 100%;
+}
+.bkcol{
+    background-color: green !important;
+    transition-delay: calc(0.25s * var(--pos)) !important;
+}
+.bkcolR{
+    transition-delay: calc(0.25s * var(--pos)) !important;
+    background-color: red !important;
+}

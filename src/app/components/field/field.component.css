@@ -1,0 +1,50 @@
+.Item{
+    padding-top: 15px;
+    width: 100%;
+}
+
+.data{
+    position: relative;
+}
+.data > input{
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid black;
+    outline: none;
+    font-size: 30px;
+}
+.data > label{
+    position: absolute;
+    font-size: 30px;
+    bottom: 0px;
+    transition: 0.5s;
+}
+.data:has(label + input:placeholder-shown) label{
+    bottom: 0px;
+    font-size: 30px;
+}
+.data:has(label + :not(input:placeholder-shown)) label,.data:has(label + input:focus) label {
+    bottom: 100%;
+    font-size: 15px;
+}
+
+.invalidCK > input{
+    border-bottom: 1px solid red;
+}
+.invalidCK > label{
+    color: red;
+}
+.validCK > input{
+    border-bottom: 1px solid green;
+}
+.validCK > label{
+    color: green;
+}
+.errMsg{
+    width: 100%;
+    padding: 5px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    color: white;
+    background-color: red;
+}

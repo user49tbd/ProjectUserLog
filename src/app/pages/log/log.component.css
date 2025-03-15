@@ -1,0 +1,305 @@
+:host {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+*{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.Container,.Content,.Intro,.Data,.LeftC,.RightC,.Slider,.BtnIntro,.BtnIntro>button,
+.SlideOptC,.RC,.SelectorFrame,.SelectorC,.items,.formName{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Container{
+    width: 100%;
+    height: 100vh;
+}
+.Content{
+    width: 70%;
+    height: 70%;
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.Intro,.Data,.LeftC,.RightC{
+    width: 100%;
+    height: 100%;
+}
+.LeftC,.RightC{
+    transition: 0.5s;
+}
+.Intro{
+    background-color: black;
+    color: white;
+    align-items: flex-start !important;
+}
+.txt{
+    padding: 10px;
+}
+.txt > h3{
+    font-size: 50px;
+    text-transform: uppercase;
+}
+.txt > p{
+    column-count: 2;
+    column-fill: balance;
+    column-gap: 20px;
+    column-rule-width: 1px;
+    column-rule-style: solid;
+    column-rule-color: white;
+}
+.Data{
+    position: absolute;
+    background-color: white;
+    z-index: 2;
+    bottom: 0px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.Slider{
+    width: 50%;
+    min-height: 100%;
+    background-color: white;
+    position: absolute;
+    left: 0px;
+    overflow: hidden;
+    transition: 0.5s;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    z-index: 5;
+}
+.BtnIntro{
+    position: absolute;
+    width: 50%;
+    height: 15%;
+    top: 0px;
+    left: 0px;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+.BtnIntro > p{
+    z-index: 5;
+}
+.BtnIntro::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    border-top-left-radius: 100%;
+    right: 0px;
+    background-color: white;
+}
+.BtnIntro>button{
+    height: 100%;
+    aspect-ratio: 1/1;
+    position: absolute;
+    right: calc(0% + 20%);
+    border-radius: 50%;
+    background-color: black;
+    bottom: 0px;
+    transform:translateY(50%);
+    color:white;
+    outline: none;
+}
+.SlideOptC{
+    height: 75%;
+    width: 100%;
+    position: absolute;
+    right: 0px;
+    color: white;
+    bottom: 0px;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 15;
+}
+.RC{
+    border-top-left-radius: 15px;
+    min-height: 100%;
+    width: 100%;
+    background-color: black;
+    right: 0px;
+    padding: 2px;
+    position: relative;
+}
+.SelectorFrame{
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.SelectorC{
+    height: 50%;
+    aspect-ratio: 1/1;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: translate(0%,-50%);
+    background-color: white;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    transition: 0.5s;
+}
+.tEffect{
+    position: absolute;
+    bottom: 1px;
+    transform: translateY(100%);
+    height: calc(100% / 2);
+    aspect-ratio: 1/1;
+    left: 0%;
+    background-color: white;
+    z-index: 1;
+}
+.tEffect::before{
+    z-index: -1;
+    border-top-left-radius: 100%;
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-48% , -45%);
+}
+.bEffect{
+    position: absolute;
+    top: 1px;
+    transform: translateY(-100%);
+    height: calc(100% / 2);
+    aspect-ratio: 1/1;
+    left: 0%;
+    background-color: white;
+    z-index: 1;
+}
+.bEffect::before{
+    z-index: -1;
+    border-bottom-left-radius: 100%;
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-48% , -51%);
+}
+.Icon{
+    width: 70%;
+    aspect-ratio: 1/1;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.items{
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.log,.sign{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+}
+.log > span ,.sign > span{
+    position: relative;
+    width: 30%;
+    aspect-ratio: 1/1;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+.txtOpt{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    color: white;
+    border-bottom: 1px solid white;
+    width: 100%;
+    position: absolute;
+    top: 70%;
+    transform: translate(-10%, -50%);
+    left: -100%;
+    opacity: 0;
+    transition: 1s;
+    font-size: 15px;
+}
+.txtOpt.select{
+    opacity: 1;
+    top: 50%;
+    transform: translate(-10%, -50%);
+}
+span > img{
+    width: 50%;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 1s;
+}
+span > img.select{
+    opacity: 1;
+}
+.formName{
+    width:50%;
+    height: 100%;
+}
+.formName  > p{
+    color: black;
+    font-size: 55px;
+    text-transform: uppercase;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
+span:has(p.txtOpt.select){
+    opacity: 1;
+}
+/*
+.Container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}*/
+app-form1{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+app-form-sign{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

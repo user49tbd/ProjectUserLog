@@ -1,0 +1,81 @@
+.Container,.ClockDiv,.LClock,.RClock,.ClockDiv,.Clock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Container{
+    height: 100%;
+    width: 100%;
+    border: 2px solid red;
+    justify-content: flex-end;
+}
+.ClockDiv{
+    height: 100%;
+    width: 40%;
+}
+.LClock{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    justify-content: flex-end !important;
+}
+.RClock{
+    position: relative;
+    width: 45%;
+    height: 100%;
+    align-items: flex-end !important;
+    justify-content: flex-start !important;
+}
+.RClock > *{
+    height: 50%;
+}
+.Line{
+    width: 50%;
+    height: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: 0% 50%;
+    transform: translateY(-50%) rotateZ(calc( ( ( 360deg / 60) * var(--pos) ) - ( 90deg - ( 360deg / 60))));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.Clock{
+    position: relative;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    background-color: #555;
+    position: relative;
+}
+.dot{
+    height: 100%;
+    width: var(--w);
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+}
+.LClock > .elmtn > .numberC{
+    font-size: 45px;
+
+}
+.RClock > .elmtn > .numberC{
+    font-size: 25px;
+
+}
+
+.numberC{
+    position: absolute;
+    color: white;
+    font-size: 30px;
+}
+.elmtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    aspect-ratio: 1/1;
+    position: relative;
+}
