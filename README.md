@@ -12,10 +12,10 @@ sql
 
 INSERT INTO role_entity VALUES ('admin');
 ## Tecnologias Utilizadas
-:heavy_check_mark: Frontend: Angular
-:heavy_check_mark: Backend: Spring Boot :lock:
-:heavy_check_mark: Segurança: Spring Security
-:heavy_check_mark: Banco de Dados: SQL (MySQL ou PostgreSQL)
+:heavy_check_mark: Frontend: Angular.
+:heavy_check_mark: Backend: Spring Boot :lock:.
+:heavy_check_mark: Segurança: Spring Security.
+:heavy_check_mark: Banco de Dados: SQL (MySQL ou PostgreSQL).
 
 
 
